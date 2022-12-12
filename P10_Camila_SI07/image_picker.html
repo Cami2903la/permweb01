@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+        function gambar() {
+            let drop_image = document.getElementById("dropdown_img").value;
+            let image = document.getElementById("image");
+
+            if (drop_image == "gorila") {
+                image.setAttribute("src","gorila.jpg");
+                alert("ini gambar gorila");
+            }else if (drop_image == "singa") {
+             image.setAttribute("src","singa.jpg");
+             alert("ini gambar singa");
+            }else if (drop_image == "elang") {
+             image.setAttribute("src","elang.jpg");
+             alert("ini gambar elang");
+            }
+            }
+    </script>
+</head>
+<body>
+    <select id="dropdown_img" onchange="gambar()">
+        <option hidden>-----pilih gambar-----</option>
+        <option value="gorila">Gorila</option>
+        <option value="singa">Singa</option>
+        <option value="elang">Elang</option>
+    </select>
+    <br />
+    <img id="image" />
+</body>
+</html>
